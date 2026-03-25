@@ -35,6 +35,28 @@ body {
   }
 }
 
+/* ── Language toggle ── */
+.lang-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.lang-toggle span:first-child,
+.lang-toggle span:last-child {
+  transition: color 0.25s ease;
+}
+
+.lang-toggle:hover span:first-child,
+.lang-toggle:hover span:last-child {
+  color: var(--color-accent);
+}
+
+/* ── Masthead rule ── */
+.masthead-rule {
+  transform-origin: left;
+}
+
 /* ── Two-column body on desktop ── */
 .manifesto-columns {
   column-count: 1;
@@ -140,6 +162,7 @@ body {
   .site-name,
   .headline,
   .location-line,
+  .masthead-rule,
   .divider-rule,
   .manifesto-body > *,
   .closing-section,
