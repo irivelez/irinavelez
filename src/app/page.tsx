@@ -25,6 +25,7 @@ const content = {
     close1: "Own your next move. The world needs people who shape it.",
     close2: "And let the unknown show you the path.",
     from: "From a place where the future is being shaped,",
+    newsletter: "Newsletter",
   },
   es: {
     location: "San Francisco \u00b7 Desde Colombia",
@@ -47,6 +48,7 @@ const content = {
     close1: "Toma las riendas de tu siguiente paso, el mundo necesita quien lo moldee.",
     close2: "Y deja que lo desconocido te muestre el camino.",
     from: "Desde un lugar donde el futuro se est\u00e1 construyendo,",
+    newsletter: "Newsletter",
   },
 } as const;
 
@@ -116,10 +118,18 @@ export default function Home() {
         delay: 1.7,
       });
 
+      gsap.from(".newsletter-cta", {
+        opacity: 0,
+        y: 4,
+        duration: 0.55,
+        ease: "power2.out",
+        delay: 2.0,
+      });
+
       gsap.from(".site-footer", {
         opacity: 0,
         duration: 0.5,
-        delay: 1.95,
+        delay: 2.2,
       });
     }, mainRef);
 
@@ -230,6 +240,14 @@ export default function Home() {
           <p className="font-serif italic text-primary text-[clamp(0.88rem,1.3vw,0.98rem)] mt-0.5">
             Irina
           </p>
+          <a
+            href="https://modobuild.beehiiv.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="newsletter-cta mt-3 md:mt-4"
+          >
+            {t.newsletter}
+          </a>
         </div>
       </div>
 
